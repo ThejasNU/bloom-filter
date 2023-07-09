@@ -75,5 +75,5 @@ func main(){
 			falsePositive++
 		}
 	}
-	fmt.Println("False positive rate:",100*(float64(falsePositive)/float64(len(datasetNotExists))))
+	fmt.Println("False positive rate:",float64(falsePositive)/float64(len(datasetNotExists)))
 }
