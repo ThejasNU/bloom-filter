@@ -65,13 +65,12 @@ func main(){
 
 	bloom := NewBloomFilter(1000)
 	
-	for key,_ := range datasetExists{
+	for key := range datasetExists{
 		bloom.Add(key)
 	}
 
 	var falsePositive int = 0
-	for key,_ := range datasetNotExists{
-		if bloom.Exists(key){
+	for key := range datasetNotExists {	if bloom.Exists(key){
 			falsePositive++
 		}
 	}
